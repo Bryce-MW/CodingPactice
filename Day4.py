@@ -30,6 +30,7 @@ def cons(a: Any, b: Any) -> Callable[[Callable[[Any, Any], Any]], Any]:
     :param b: the second value in the pair
     :return: the pair
     """
+
     def pair(f: Callable[[Any, Any], Any]):
         """
         Calls f on the objects on the pairs.
@@ -37,6 +38,7 @@ def cons(a: Any, b: Any) -> Callable[[Callable[[Any, Any], Any]], Any]:
         :return: the output of the function
         """
         return f(a, b)
+
     return pair
 
 

@@ -50,18 +50,13 @@ if __name__ == "__main__":
             (([1, 2, 3, 4, 5], [120, 60, 40, 30, 24]),
              ([3, 2, 1], [2, 3, 6]))
         single_tests = [division(test[0]) for test in tests]
-        if all([test == tests[i][1] for i, test in enumerate(single_tests)]):
-            print("single_pass passes all tests")
-        else:
-            [print("Test " + str(tests[i]) + " failed for single_pass with " + str(test))
-             for i, test in enumerate(single_tests) if test is not tests[i][1]]
+        print("single_pass passes all tests") if all([test == tests[i][1] for i, test in enumerate(single_tests)]) \
+            else [print("Test " + str(tests[i]) + " failed for single_pass with " + str(test))
+                  for i, test in enumerate(single_tests) if test is not tests[i][1]]
         multi_tests = [non_division(test[0]) for test in tests]
-        if all([test == tests[i][1] for i, test in enumerate(multi_tests)]):
-            print("multi_pass passes all tests")
-        else:
-            [print("Test " + str(tests[i]) + " failed for multi_pass with " + str(test))
-             for i, test in enumerate(multi_tests) if test is not tests[i][1]]
-
+        print("multi_pass passes all tests") if all([test == tests[i][1] for i, test in enumerate(multi_tests)]) \
+            else [print("Test " + str(tests[i]) + " failed for multi_pass with " + str(test))
+                  for i, test in enumerate(multi_tests) if test is not tests[i][1]]
     elif do_test == "division":
         print(division([int(i) for i in input().split()]))
     else:

@@ -53,7 +53,7 @@ def do_jobs() -> None:
             if jobs[0][0] <= datetime.now():
                 jobs.pop(0)[1]()
             else:
-                sleep((jobs[0][0]-datetime.now()).seconds)
+                sleep((jobs[0][0] - datetime.now()).seconds)
         else:
             with schedule_lock:
                 schedule_lock.wait()

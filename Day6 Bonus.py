@@ -62,7 +62,7 @@ def check_ends(list_one: List[SupportsFloat], list_two: List[SupportsFloat], cur
 
 
 def put_min_in(list_minimum: List[SupportsFloat], list_maximum: List[SupportsFloat], minimum: SupportsFloat, maximum:
-               SupportsFloat, sorted_list: List[SupportsFloat]) -> None:
+SupportsFloat, sorted_list: List[SupportsFloat]) -> None:
     """
     Puts in the minimum value and checks if either list is empty.
     :param list_minimum: the list that the current minimum value came from

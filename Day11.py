@@ -30,7 +30,7 @@ def two_steps(number_of_steps: int) -> int:
     elif number_of_steps == 2:
         return 2
     else:
-        return two_steps(number_of_steps-1) + two_steps(number_of_steps-2)
+        return two_steps(number_of_steps - 1) + two_steps(number_of_steps - 2)
 
 
 def n_steps(number_of_steps: int, options: List[int]) -> int:
@@ -39,7 +39,7 @@ def n_steps(number_of_steps: int, options: List[int]) -> int:
     count: int = 0
     for option in options:
         if number_of_steps >= option:
-            count += n_steps(number_of_steps-option, options)
+            count += n_steps(number_of_steps - option, options)
     return count
 
 

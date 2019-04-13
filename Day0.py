@@ -6,7 +6,7 @@ For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
 
 Bonus: Can you do this in one pass?
 
-The `multi_pass` function uses my original method and the `single_pass` function uses only a single pass as is the bonus.
+The `multi_pass` function uses my original method and the `single_pass` function uses only a single pass as is the bonus
 
 When running in interactive mode, the first line of input determines if tests are run (if empty), or which pass mode
 should be enabled.
@@ -54,7 +54,7 @@ def single_pass(list_of_numbers: Sequence[Number], k: Union[int, float], looking
     :param looking_for: a set used as a temporary variable, should never be provided
     :return: a boolean representing if k can be constructed by adding two values in `list_of_numbers`
     """
-    return (any([True for number in list_of_numbers if number in looking_for or looking_for.add(k-number)]),
+    return (any([True for number in list_of_numbers if number in looking_for or looking_for.add(k - number)]),
             looking_for.clear())[0]
 
 
@@ -65,15 +65,11 @@ if __name__ == "__main__":
             (([10, 15, 3, 7], 17, True),
              ([10, 15, 3, 7], 18, False))
         single_tests = [test[2] == single_pass(test[0], test[1]) for test in tests]
-        if all([test is tests[i][2] for i, test in enumerate(single_tests)]):
-            print("single_pass passes all tests")
-        else:
-            [print("Test " + str(tests[i]) + " failed for single_pass with " + str(test))
-             for i, test in enumerate(single_tests) if test is not tests[i][2]]
+        print("single_pass passes all tests") if all([test is tests[i][2] for i, test in enumerate(single_tests)]) \
+            else [print("Test " + str(tests[i]) + " failed for single_pass with " + str(test))
+                  for i, test in enumerate(single_tests) if test is not tests[i][2]]
         multi_tests = [test[2] == multi_pass(test[0], test[1]) for test in tests]
-        if all([test is tests[i][2] for i, test in enumerate(multi_tests)]):
-            print("multi_pass passes all tests")
-        else:
+        print("multi_pass passes all tests") if all([test is tests[i][2] for i, test in enumerate(multi_tests)]) else \
             [print("Test " + str(tests[i]) + " failed for multi_pass with " + str(test))
              for i, test in enumerate(multi_tests) if test is not tests[i][2]]
 

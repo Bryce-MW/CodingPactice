@@ -26,6 +26,7 @@ __author__ = "Bryce Wilson"
 from typing import Any
 
 
+# I did not use this from my new util.tree module because it allows Any for left and right
 # Given:
 class Node:
     """
@@ -73,5 +74,6 @@ def deserialize(node: str) -> Node:
     return eval(node)
 
 
-test_node = Node('root', Node('left', Node('left.left')), Node('right'))
-print(deserialize(serialize(test_node)).left.left.val == 'left.left')
+if __name__ == "__main__":
+    test_node = Node('root', Node('left', Node('left.left')), Node('right'))
+    print(deserialize(serialize(test_node)).left.left.val == 'left.left')

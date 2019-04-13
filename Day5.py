@@ -46,6 +46,7 @@ class Element:
     An element of a doubly linked list using XOR. A doubly linked list using XOR only has one pointed called Both.
     There are also booleans for if the element is the start or the end of one of these lists.
     """
+
     def __init__(self, element: Any):
         """
         Creates a new `Element` with no pointer that is both the first and last element in some list. The value of the
@@ -77,7 +78,7 @@ class DoublyLinkedList(collections.abc.MutableSequence):
         :return: None
         """
         if self.start is None:
-            self.start = get_pointer(Element(element))
+            self.start, ref_counts[self.start] = get_pointer(Element(element))
             ref_counts[self.start] += 1
         else:
             past_pointer: int = 0
@@ -121,7 +122,7 @@ class DoublyLinkedList(collections.abc.MutableSequence):
         :param element: the value to set the `Element` to
         :return: None
         """
-        before: Element = self.get(index-1, element=True)
+        before: Element = self.get(index - 1, element=True)
         after: Element = self.get(index, element=True)
         before.both ^= get_pointer(after)
         after.both ^= get_pointer(before)
