@@ -23,25 +23,7 @@ __author__ = "Bryce Wilson"
 
 
 from typing import Any, List
-
-
-# Taken from Day 2
-class Node:
-    """
-    A node in a binary tree (given to us).
-    Has a value, and the nodes on the left and right below it.
-    """
-
-    def __init__(self, val: Any, left = None, right = None):
-        """
-        Creates a new node object with the specified value and optional left and right nodes.
-        :param val: the value of this node
-        :param left: the node to the left
-        :param right: the node to the right
-        """
-        self.val: Any = val
-        self.left: Node = left
-        self.right: Node = right
+from util.tree import Node
 
 
 def is_unival_tree(tree: Node) -> bool:
