@@ -20,3 +20,30 @@ __author__ = "Bryce Wilson"
 #  This program is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike
 #   4.0 International (CC BY-NC-SA 4.0) https://creativecommons.org/licenses/by-nc-sa/4.0/
 
+
+from typing import List
+
+
+def two_steps(number_of_steps: int) -> int:
+    if number_of_steps == 1:
+        return 1
+    elif number_of_steps == 2:
+        return 2
+    else:
+        return two_steps(number_of_steps-1) + two_steps(number_of_steps-2)
+
+
+def n_steps(number_of_steps: int, options: List[int]) -> int:
+    if number_of_steps == 0:
+        return 1
+    count: int = 0
+    for option in options:
+        if number_of_steps >= option:
+            count += n_steps(number_of_steps-option, options)
+    return count
+
+
+if __name__ == "__main__":
+    print(two_steps(4))
+    print(n_steps(4, [1, 2]))
+    print(n_steps(10, [1, 3, 5]))
