@@ -13,11 +13,11 @@ __author__ = "Bryce Wilson"
 #   4.0 International (CC BY-NC-SA 4.0) https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 
-from typing import List, Tuple, Callable
-from datetime import datetime, timedelta
 import threading
+from datetime import datetime, timedelta
 from threading import Thread
 from time import sleep
+from typing import Callable, List, Tuple
 
 jobs: List[Tuple[datetime, Callable[[], None]]] = []
 schedule_lock: threading.Condition = threading.Condition()

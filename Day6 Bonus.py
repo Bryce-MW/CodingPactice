@@ -10,8 +10,8 @@ __author__ = "Bryce Wilson"
 #   4.0 International (CC BY-NC-SA 4.0) https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 
-from typing import List, SupportsFloat
 import math
+from typing import List, SupportsFloat
 
 
 def check_min(list_minimum: List[SupportsFloat], list_maximum: List[SupportsFloat], current_minimum: SupportsFloat,

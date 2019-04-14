@@ -19,7 +19,7 @@ __author__ = "Bryce Wilson"
 #   4.0 International (CC BY-NC-SA 4.0) https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 
-from typing import Callable, Any
+from typing import Any, Callable
 
 
 # Given:

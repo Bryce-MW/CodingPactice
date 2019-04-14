@@ -19,8 +19,8 @@ __author__ = "Bryce Wilson"
 #   4.0 International (CC BY-NC-SA 4.0) https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 
-from typing import Iterable, List
 import math
+from typing import Iterable, List
 
 
 def division(multipliers: Iterable[int]) -> List[int]:

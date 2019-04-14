@@ -15,8 +15,8 @@ __author__ = "Bryce Wilson"
 def longest_substring(input_string: str, letters: int) -> str:
     maximum: str = ""
     for i in range(len(input_string)):
-        for j in range(len(input_string)-i):
-            current = input_string[i:i+j]
+        for j in range(len(input_string) - i):
+            current = input_string[i:i + j]
             if len(current) > len(maximum) and len(set(current)) <= letters:
                 maximum = current
     return maximum

@@ -15,8 +15,8 @@ __author__ = "Bryce Wilson"
 #   4.0 International (CC BY-NC-SA 4.0) https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 
-from typing import Dict, Any, Union
 import collections.abc
+from typing import Any, Dict, Union
 
 pointer_store: Dict[int, Any] = {}
 ref_counts: Dict[int, int] = collections.defaultdict(lambda: 0)

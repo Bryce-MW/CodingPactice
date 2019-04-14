@@ -19,8 +19,8 @@ __author__ = "Bryce Wilson"
 #   4.0 International (CC BY-NC-SA 4.0) https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 
-from typing import List, Tuple, Union
 import itertools
+from typing import List, Tuple, Union
 
 
 def largest_sum(numbers: List[int]) -> int:

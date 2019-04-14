@@ -19,8 +19,8 @@ __author__ = "Bryce Wilson"
 #   4.0 International (CC BY-NC-SA 4.0) https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 
-from typing import Sequence, Union, MutableSet, TypeVar
 import itertools
+from typing import MutableSet, Sequence, TypeVar, Union
 
 Number = TypeVar('Number', int, float, complex)
 
