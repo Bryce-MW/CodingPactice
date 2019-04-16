@@ -17,6 +17,11 @@ from typing import Any
 # Let's assume that the stream is a list but we can only do a list.pop(0) and len(list) == 0 is when the end of the
 # stream is reached
 def equal_chance(stream: list) -> Any:
+    """
+    Produces an element from a stream with an equal chance of each
+    :param stream: the stream (yes it's in list form but this is only an example)
+    :return: one of the objects from the list
+    """
     current_chance: int = 2
     current: Any = stream.pop(0)
     while len(stream) != 0:
