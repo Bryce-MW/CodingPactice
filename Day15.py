@@ -20,6 +20,11 @@ N: int = 10
 
 
 def record(order_id: int) -> None:
+    """
+    Add a record to the log.
+    :param order_id: the order id to add
+    :return: None
+    """
     if len(log) < N:
         log.append(order_id)
     else:
@@ -28,6 +33,11 @@ def record(order_id: int) -> None:
 
 
 def get_last(i: int) -> int:
+    """
+    get the ith last element from the log.
+    :param i: how many elements from the end (starts at 1)
+    :return: the element
+    """""
     return log[-i]
 
 
