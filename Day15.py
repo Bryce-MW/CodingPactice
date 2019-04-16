@@ -35,5 +35,5 @@ if __name__ == "__main__":
     for j in range(33):
         record(j)
     for j in range(N):
-        print(get_last(j+1), end=" ")
+        print(get_last(j + 1), end=" ")
     print()
