@@ -27,6 +27,14 @@ from typing import List, Tuple
 
 
 def path(wall_map: List[List[bool]], pathed: List[List[bool]], loc: Tuple[int, int], final: Tuple[int, int]) -> int:
+    """
+    Finds the length required to get to the final goal
+    :param wall_map: The map of the walls
+    :param pathed: The map of which locations have already been considered
+    :param loc: The current location
+    :param final: The final destination
+    :return: The length required
+    """
     if loc[0] + 1 == final[0] and loc[1] == final[1] or \
             loc[0] - 1 == final[0] and loc[1] == final[1] or \
             loc[1] + 1 == final[1] and loc[0] == final[0] or \
